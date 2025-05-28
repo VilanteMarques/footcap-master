@@ -181,8 +181,6 @@ body {
   background: var(--background, var(--bittersweet));
   color: var(--color, var(--white));
   font-size: var(--fs-5);
-  position:absolute;
-  margin-left: -12%;
   display: flex; 
   align-items: center;
   gap: 50px;
@@ -566,7 +564,7 @@ body {
 /* Container principal das imagens e do botão */
 /* Seção que ocupa toda a largura */
 .section.cta {
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
   display: flex;
   flex-direction: column;
@@ -577,8 +575,8 @@ body {
 /* Container das imagens */
 .cta-card {
   position: relative;
-  width: 100%;
-  height: 300px; /* Ajuste a altura conforme necessário */
+  width: 50%;
+  height: 100%; 
   overflow: hidden; /* Garante que nada transborde */
 }
 
@@ -587,8 +585,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1240px;
-  height: 100px;
+  width: 41%;
+  /* height: 100px; */
   object-fit: cover;
   z-index: 0;
 }
@@ -596,10 +594,10 @@ body {
 /* Imagem da frente sobreposta */
 .imagem_frente {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 80%;
+  top: 75px;
+  left: 46px;
+  width: 41%;
+  /* height: 80%; */
   object-fit: cover;
   z-index: 1;
 }
@@ -756,7 +754,8 @@ body {
 
 .footer { font-family: var(--ff-roboto); }
 
-.footer-top { background: var(--cultured); }
+.footer-top {background-color: #000;
+  color: white;  }
 
 .footer-brand {
   padding-bottom: 50px;
@@ -767,8 +766,9 @@ body {
 .footer-brand .logo { margin-bottom: 15px; }
 
 .social-list {
-  display: flex-start;
+  display: flex;
   align-items: center;
+  height: 100px;
   gap: 10px;
 }
 
@@ -787,7 +787,7 @@ body {
 
 .footer-list-title {
   position: relative;
-  color: var(--rich-black-fogra-29);
+  color: white;
   font-family: var(--ff-josefin-sans);
   font-size: var(--fs-3);
   font-weight: var(--fw-700);
@@ -1307,7 +1307,9 @@ a.footer-link:is(:hover, :focus) { color: var(--bittersweet); }
    */
 
   .footer-link-box {
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     gap: 50px;
   }
 
